@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    container_name: postgres_composer
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
